@@ -1,0 +1,77 @@
+version: v1.0
+
+phenomena:
+
+  - id: ATTRACTOR_RIGID
+    category: stability
+    scope: global
+    introduced_in: v1.0
+    description: >
+      Convergence rapide et persistante des trajectoires inter-forks
+      vers une zone étroite de l’espace des champs.
+    interpretation_boundaries:
+      - Does not imply imbalance
+      - May be regime-dependent
+
+  - id: ATTRACTOR_SOFT
+    category: stability
+    scope: global
+    introduced_in: v1.0
+    description: >
+      Convergence lente avec inertie dépendante du passé.
+    interpretation_boundaries:
+      - May coexist with instability elsewhere
+
+  - id: AMPLIFICATION_CHAOTIC
+    category: instability
+    scope: global
+    introduced_in: v1.0
+    description: >
+      Amplification non linéaire de micro-perturbations inter-forks.
+    interpretation_boundaries:
+      - May be transient
+
+  - id: HEGEMONY_EMERGENT
+    category: dominance
+    scope: faction
+    introduced_in: v1.0
+    description: >
+      Corrélation persistante entre succès global et structure unique.
+    interpretation_boundaries:
+      - Does not imply design error
+
+  - id: DOMINANCE_CONDITIONAL
+    category: dominance
+    scope: regime
+    introduced_in: v1.0
+    description: >
+      Avantage structurel limité à certains régimes.
+    interpretation_boundaries:
+      - Context-dependent only
+
+  - id: TRANSITION_ABORTED
+    category: regime
+    scope: global
+    introduced_in: v1.0
+    description: >
+      Tentatives répétées de transition sans bascule effective.
+    interpretation_boundaries:
+      - May indicate high inertia
+
+  - id: REGIME_OSCILLATION
+    category: regime
+    scope: global
+    introduced_in: v1.0
+    description: >
+      Alternance fréquente entre régimes proches.
+    interpretation_boundaries:
+      - May reflect multi-attractor competition
+
+  - id: LOW_DIVERSITY_DRIFT
+    category: entropy
+    scope: global
+    introduced_in: v1.0
+    description: >
+      Réduction progressive de la diversité dynamique globale.
+    interpretation_boundaries:
+      - Not equivalent to collapse

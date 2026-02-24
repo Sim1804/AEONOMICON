@@ -1,0 +1,57 @@
+version: v1.0
+
+mappings:
+
+  - phenomenon: ATTRACTOR_RIGID
+    required_signals:
+      - attractor_detected
+      - low_interfork_variance
+    thresholds:
+      variance_max: 0.01
+
+  - phenomenon: ATTRACTOR_SOFT
+    required_signals:
+      - attractor_detected
+      - moderate_inertia
+    thresholds:
+      variance_max: 0.05
+
+  - phenomenon: AMPLIFICATION_CHAOTIC
+    required_signals:
+      - high_interfork_divergence
+      - positive_second_derivative
+    thresholds:
+      divergence_min: 0.5
+
+  - phenomenon: HEGEMONY_EMERGENT
+    required_signals:
+      - dominance_score_high
+      - cross_regime_stability
+    thresholds:
+      dominance_min: 0.8
+
+  - phenomenon: DOMINANCE_CONDITIONAL
+    required_signals:
+      - dominance_score_high
+      - regime_dependency_detected
+    thresholds:
+      dominance_min: 0.7
+
+  - phenomenon: TRANSITION_ABORTED
+    required_signals:
+      - repeated_transition_checks
+      - no_regime_change
+    thresholds:
+      failed_attempts_min: 10
+
+  - phenomenon: REGIME_OSCILLATION
+    required_signals:
+      - rapid_regime_switching
+    thresholds:
+      oscillation_count_min: 5
+
+  - phenomenon: LOW_DIVERSITY_DRIFT
+    required_signals:
+      - entropy_low
+    thresholds:
+      entropy_max: 0.2
